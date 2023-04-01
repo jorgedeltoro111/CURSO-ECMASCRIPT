@@ -26,7 +26,11 @@ const getDatos = () => {
 
 //Segunda forma de hacer lo mismo pero con async y await
 async function data ()  {
-    const info = await getDatos();
-    console.log(info);
+    try{    
+        const info = await getDatos();
+        console.log(info);
+    }catch(error){
+        console.log(error);
+    }
 }
 data();
